@@ -38,4 +38,12 @@ public class Board {
     public Piece piece(Position position){
         return pieces[position.getRow()][position.getColumn()];
     }
+
+    public void placePiece(Piece piece, Position position){
+        //"pieces" foi instânciada neste construtor
+        pieces[position.getRow()][position.getColumn()] = piece;
+        //Mostrando que a peça não está mais na posiçaõ nula 
+        piece.position = position;
+    }
+
 }
