@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collector;
+//import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import chess.ChessMatch;
@@ -60,9 +60,17 @@ public class UI {
         printCapturedPieces(captured);
         System.out.println();
         System.out.println("Turn : "+ chm.getTurn());
-        System.out.println("Waiting player: "+ chm.getCurrentPlayer());
-        if(chm.getCheck()){
-            System.out.println("CHECK!");
+        //# VVV #Se não estiver em CheckMate
+        if(!chm.getCheckMate()) {
+            //Esperando a jogado do próximo jogador
+            System.out.println("Waiting player: "+ chm.getCurrentPlayer());
+            if(chm.getCheck()){
+                System.out.println("CHECK!");
+            }
+        } 
+        else { 
+            System.out.println("CHECKMATE!!!");
+            System.out.println("Winner: " + chm.getCurrentPlayer() +"!!!" );
         }
     }
 

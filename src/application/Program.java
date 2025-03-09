@@ -21,7 +21,8 @@ public class Program {
         ChessMatch chm = new ChessMatch();
         List<ChessPiece> captured = new ArrayList<>();
 
-        while (true){
+        //# VVV # Enquanto a minha partida não esiver no CheckMate
+        while (!chm.getCheckMate()) {
             try {
                 UI.clearScreen();
                 UI.printMatch(chm, captured);
@@ -53,5 +54,7 @@ public class Program {
                 sc.nextLine();
             }
         }
+        UI.clearScreen();
+        UI.printMatch(chm, captured);
     } 
 }
