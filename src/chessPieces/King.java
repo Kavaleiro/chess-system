@@ -13,7 +13,7 @@ public class King extends ChessPiece {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "K";
     }
 
@@ -74,6 +74,5 @@ public class King extends ChessPiece {
         }
         
         return mat;
-        //throw new UnsupportedOperationException("Unimplemented method 'possibleMoves'");
     }
 }

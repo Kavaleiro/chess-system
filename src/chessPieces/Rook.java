@@ -13,7 +13,7 @@ public class Rook extends ChessPiece {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "R";
     }
 
@@ -65,6 +65,6 @@ public class Rook extends ChessPiece {
         }
         
         return mat;
-        //throw new UnsupportedOperationException("Unimplemented method 'possibleMoves'");
+
     }
 }
